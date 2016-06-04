@@ -90,6 +90,11 @@ bot.on("message", function(user, userID, channelID, message, rawEvent) {
     if (message === "!name.pick") {
         sendMessages(channelID, [namepicker()]);
     }
+   
+// github
+    if (message === "!github" || message === "!git") {
+        sendMessages(channelID, ["**GitHub**\nhttps://github.com/zacimac/Helium"])
+    }
     
 // repeat
     if (message === "!repeat") {
