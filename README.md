@@ -4,6 +4,9 @@ A Discord bot that manages servers and more! [Join the discord server](https://d
 ### Libary
 Helium uses izy521's [Discord.io](https://github.com/izy521/discord.io) Libary
 
+### Helium.js file
+All commands and main code is containded in the `Helium.js` file... Feel free to fork
+
 ### Commands
 - `!uptime`
     Checks how long Helium has been running for.
@@ -12,9 +15,10 @@ Helium uses izy521's [Discord.io](https://github.com/izy521/discord.io) Libary
     Repeats what the user has said
     
     ###### Example
-    
-    >User - "!repeat Hi, I'm feeling great"
-    >Helium - "Hi, I'm feeling great"
+```
+    User - "!repeat Hi, I'm feeling great"
+    Helium - "Hi, I'm feeling great"
+```
 
 - `!kill` (Only can be performed by Zacimac)
     Kills the bot (Makes it offline)
