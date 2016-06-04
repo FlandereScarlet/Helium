@@ -29,6 +29,25 @@ All commands and main code is containded in the `Helium.js` file... Feel free to
 - `!name.pick`
     Picks a random name. (Was an experement)
     
+######Commands to come
+
+- `!createrole {Role name}`
+    Creates a role
+
+- `!deleterole {Role name}`
+    Deletes a role
+
+- `!rolecolor {Role name}`
+    Changes a role color using HEX
+
+- `!addrole {username} {Role name}`
+    Add's a user to a role
+
+- `!removerole {username} {Role name}`
+    Removes a user from a role
+
+The commands are not yet created as yet we are trying to work on it. If you want to help create the commands, You will be given massive credit! (Main Developer)
+
 ### Open source
 This project is open source, Although if you do use any of the code please give credit. 
 
