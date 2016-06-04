@@ -5,7 +5,7 @@ A Discord bot that manages servers and more! [Join the discord server](https://d
 Helium uses izy521's [Discord.io](https://github.com/izy521/discord.io) Libary
 
 ### Helium.js file
-All commands and main code is containded in the `Helium.js` file... Feel free to fork
+All commands and main code is containded in the `Helium.js` file... Feel free to request edit or what ever :thumbsup:
 
 ### Commands
 - `!uptime`
