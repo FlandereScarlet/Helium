@@ -55,23 +55,21 @@ bot.on("message", function(user, userID, channelID, message, rawEvent) {
     
 // Kill
     
-    if(message === "!kill") {
-        if(userID == "138862213527109632") {
+    if(message === "!kill" && userID == "138862213527109632") {
             sendMessages(channelID, ["**-= Shutting down, Bye! =-**"]);
             setTimeout(function(){ console.log("\n\n\n[INFO] Kill command has been triggered!\n\n") }, 2000);
             setTimeout(function(){ process.exit(0) }, 4000);
-        } 
-        else {
+    } 
+    else {
         sendMessages(channelID, [":x: || Only Zacimac can perform this command || :x:"]);
-        }
-        }
+    }
     
     if (message === "!kill -n" && userID == "138862213527109632") {
         console.log("\n\n\n[INFO] Kill command has been triggered!\n\n")
         setTimeout(function(){ process.exit(0) }, 2000);
     }
-    else if (message === "!kill -n"){
-    sendMessages(channelID, [":x: || Only Zacimac can perform this command || :x:"]);
+    else {
+    	sendMessages(channelID, [":x: || Only Zacimac can perform this command || :x:"]);
     } 
     
 // info
