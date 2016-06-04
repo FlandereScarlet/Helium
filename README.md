@@ -11,15 +11,6 @@ All commands and main code is containded in the `Helium.js` file... Feel free to
 - `!uptime`
     Checks how long Helium has been running for.
     
-- `!repeat`
-    Repeats what the user has said
-    
-    ###### Example
-```
-    User - "!repeat Hi, I'm feeling great"
-    Helium - "Hi, I'm feeling great"
-```
-
 - `!kill` (Only can be performed by Zacimac)
     Kills the bot (Makes it offline)
     
@@ -30,6 +21,15 @@ All commands and main code is containded in the `Helium.js` file... Feel free to
     Picks a random name. (Was an experement)
     
 ######Commands to come
+
+- `!repeat`
+    Repeats what the user has said
+    
+    ###### Example
+```
+    User - "!repeat Hi, I'm feeling great"
+    Helium - "Hi, I'm feeling great"
+```
 
 - `!createrole {Role name}`
     Creates a role
