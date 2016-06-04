@@ -223,7 +223,7 @@ function calcUptime(cI) {
 }
 
 function namepicker(chID) {    
-    var things = ['John', 'Zaci', 'Jack', 'Sophie', 'Darth', 'Flower'];
+    var things = ['John', 'Zaci', 'Jack', 'Sophie', 'Darth', 'Flower', 'Thomas', 'Cameron', 'Luke', 'James', 'Mike', 'Michael', 'Jessica', 'Jesse'];
     var rand = things[Math.floor(Math.random() * things.length)];
     return rand;
 }
