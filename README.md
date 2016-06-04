@@ -2,7 +2,7 @@
 A Discord bot that manages servers and more! [Join the discord server](https://discord.gg/0ynKSxHArBT4OFQj)
 
 ### Libary
-Helium uses izy521's [Discord.io](https://github.com/izy521/discord.io)Libary
+Helium uses izy521's [Discord.io](https://github.com/izy521/discord.io) Libary
 
 ### Commands
 - `!uptime`
