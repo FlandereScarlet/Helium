@@ -1,11 +1,11 @@
 # Helium
 A Discord bot that manages servers and more! [Join the discord server](https://discord.gg/0ynKSxHArBT4OFQj)
 
-### Libary
-Helium uses izy521's [Discord.io](https://github.com/izy521/discord.io) Libary
+### Library
+Helium uses izy521's [Discord.io](https://github.com/izy521/discord.io) Library. Thanks for your hard work!
 
 ### Helium.js file
-All commands and main code is containded in the `Helium.js` file... Feel free to request edit or what ever :thumbsup:
+All commands and main code is containded in the `Helium.js` file... Feel free to fork it and submit a PR! :thumbsup:
 
 ### Commands
 - `!uptime`
@@ -49,7 +49,7 @@ All commands and main code is containded in the `Helium.js` file... Feel free to
 The commands are not yet created as yet we are trying to work on it. If you want to help create the commands, You will be given massive credit! (Main Developer)
 
 ### Open source
-This project is open source, Although if you do use any of the code please give credit. 
+This project is open source, Although if you do use any of the code please give credit and link to our Github.
 
 ### Contribute
 If you would like to contribute to this project you will be on the Helium developer webite page (If you like) and also will be given the Helium Dev role on the [BotTopia Disord server](https://discord.gg/0ynKSxHArBT4OFQ)
