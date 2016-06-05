@@ -9,19 +9,15 @@ bot.startDate = Date.now();
 
 bot.on("ready", function(rawEvent) {
     
-    setTimeout(function(){ console.log(" ") }, 1000);
-    setTimeout(function(){ console.log(" Helium.") }, 1100);
-    setTimeout(function(){ console.log("By Zacimac") }, 1200);
-    setTimeout(function(){ console.log(" ") }, 1300);
-    setTimeout(function(){ console.log("------------------"); }, 1400);
-    setTimeout(function(){ console.log(" ") }, 1500);
-    setTimeout(function(){ console.log("[INFO] " + bot.username + " is now running") }, 1600);
-    setTimeout(function(){ console.log(" ") }, 1700);
-    setTimeout(function(){ console.log("[INFO] " + bot.username + "'s ID = " + bot.id) }, 1800);
-    setTimeout(function(){ console.log(" ") }, 1900);
-    setTimeout(function(){ console.log("[INFO] Running version of " + bot.username + " 1.2") }, 2000);
-    setTimeout(function(){ console.log(" ") }, 2100);
-    setTimeout(function(){ console.log("------------------"); }, 2200);
+    console.log("------------------")
+    console.log(" ")
+    console.log("[INFO] " + bot.username + " is now running")
+    console.log(" ")
+    console.log("[INFO] " + bot.username + "'s ID = " + bot.id)
+    console.log(" ")
+    console.log("[INFO] Running version of " + bot.username + " 1.2")
+    console.log(" ")
+    console.log("------------------")
     bot.setPresence({game: "Hi! I'm Helium!"});
     
 });
