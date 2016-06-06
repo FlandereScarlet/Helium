@@ -22,6 +22,9 @@ All commands and main code is containded in the `Helium.js` file... Feel free to
     
 ######Commands to come
 
+- `!refresh` (Only can be performed by zacimac)
+    Refreshes the js file to check for any edits in the file...
+
 - `!repeat`
     Repeats what the user has said
     
