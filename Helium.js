@@ -8,16 +8,19 @@ var bot = new Discordbot({
 bot.startDate = Date.now();
 
 bot.on("ready", function(rawEvent) {
-    
-    console.log("------------------")
+    console.log(" ");
+    console.log(" Helium.");
+    console.log("By Zacimac");
+    console.log(" ");
+    console.log("------------------"); ;
+    console.log(" ");
+    console.log("[INFO] " + bot.username + " is now running");
+    console.log(" ");
+    console.log("[INFO] " + bot.username + "'s ID = " + bot.id);
     console.log(" ")
-    console.log("[INFO] " + bot.username + " is now running")
-    console.log(" ")
-    console.log("[INFO] " + bot.username + "'s ID = " + bot.id)
-    console.log(" ")
-    console.log("[INFO] Running version of " + bot.username + " 1.2")
-    console.log(" ")
-    console.log("------------------")
+    console.log("[INFO] Running version of " + bot.username + " 1.4");
+    console.log(" ");
+    console.log("------------------");
     bot.setPresence({game: "Hi! I'm Helium!"});
     
 });
@@ -29,7 +32,13 @@ bot.on("message", function(user, userID, channelID, message, rawEvent) {
 	console.log("----------");
 	
     
-	var message = message.toLowerCase();
+	message.split(" "); //Split the message on spaces. You'll see why.
+	console.log("[DEBUG] message after split: " + message); //Log message variable after splitting
+	var msg = message; //Assign message array to a new variable because we'll be changing the message variable
+	console.log("[DEBUG] msg: " + msg); //Log msg variable
+	message = message[0].toLowerCase(); //Assign message as just the command
+	console.log("[DEBUG] message[0]: " + message); //Check if this gives only the command then remove it once it works.
+	msg.shift(); //Pops the command out of the message array for ease of access (you'll see why).
         
 //////////////////////
 //                  //
@@ -92,7 +101,8 @@ bot.on("message", function(user, userID, channelID, message, rawEvent) {
     
 // repeat
     if (message === "!repeat") {
-        sendMessages(channelID, [":x: ``Sorry, Currently this feature is in progress.`` :x:"]);
+    	var string = msg.join(" "); //Join the msg variable we initialized in the beginning of the checks (line 37);
+        sendMessages(channelID, ["\u200B\u180E" + msg]); //CHECK THIS
     }
 
 // website
@@ -126,8 +136,7 @@ bot.on("disconnected", function() {
     setTimeout(function(){ bot.connect() }, 12005);
 
 });
-
-
+//DO NOT EDIT THE BELOW IF YOU DON'T WANT THINGS TO BREAK
 function sendMessages(ID, messageArr, interval) {
 	var callback, resArr = [], len = messageArr.length;
 	typeof(arguments[2]) === 'function' ? callback = arguments[2] : callback = arguments[3];
@@ -153,7 +162,6 @@ function sendMessages(ID, messageArr, interval) {
 	}
 	_sendMessages();
 }
-
 function sendFiles(channelID, fileArr, interval) {
 	var callback, resArr = [], len = fileArr.length;
 	typeof(arguments[2]) === 'function' ? callback = arguments[2] : callback = arguments[3];
@@ -179,7 +187,7 @@ function sendFiles(channelID, fileArr, interval) {
 	}
 	_sendFiles();
 }
-
+//OK, you're free to continue editing. Declare new functions here
 function calcUptime(cI) {
     var time = 0;
     var days = 0;
@@ -215,9 +223,11 @@ function calcUptime(cI) {
     sendMessages(cI, ["```xl\nUptime: " + days + dayText 
         + hrs + hrText + min + minText + sec + secText + "\n```"]);
 }
-
 function namepicker(chID) {    
-    var things = ['John', 'Zaci', 'Jack', 'Sophie', 'Darth', 'Flower', 'Thomas', 'Cameron', 'Luke', 'James', 'Mike', 'Michael', 'Jessica', 'Jesse'];
+    var things = ['John', 
+    'Zaci', 'Jack', 'Sophie', 'Darth', 
+    'Flower', 'Thomas', 'Cameron', 'Luke', 
+    'James', 'Mike', 'Michael', 'Jessica', 'Jesse']; //Just word-wrap array for
     var rand = things[Math.floor(Math.random() * things.length)];
     return rand;
 }
