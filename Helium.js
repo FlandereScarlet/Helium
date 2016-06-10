@@ -10,7 +10,7 @@ bot.startDate = Date.now();
 bot.on("ready", function(rawEvent) {
     console.log(" ");
     console.log(" Helium.");
-    console.log("By Zacimac");
+    console.log("By Zacimac & Contributors");
     console.log(" ");
     console.log("------------------"); ;
     console.log(" ");
