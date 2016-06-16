@@ -2,6 +2,7 @@ title Helium Console
 color 0D
 @echo off
 :foreverrun
+cls
 set /P c=Do you want this bot to automatically restart on error? [Y/N/Q]
 if /I "%c%" EQU "Y" goto :forever
 if /I "%c%" EQU "N" goto :once
