@@ -2,9 +2,7 @@
 {
   "bot": {
     "public": false,
-    "token": "set if public = true",
-    "email": "set if public = false",
-    "pass": "set if public = false",
+    "token": "set always. If public = false, You'll need to find the bots token the hard way. Can be found by local storage or some other way",
     "comments": "Yes, public can be changed. If you ask about it I'll slap you."
   },
   "configuration": {
