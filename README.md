@@ -1,3 +1,5 @@
+![alt tag](https://raw.githubusercontent.com/zacimac/Helium/master/heliumbanner.png)
+
 # Helium
 A Discord bot that manages servers and more! [Join the discord server](https://discord.gg/0ynKSxHArBT4OFQj)
 
