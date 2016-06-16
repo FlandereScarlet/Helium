@@ -110,12 +110,13 @@ bot.on("message", function(user, userID, channelID, message, rawEvent) {
     
 // eval | CHECK IT! :D
     if (message === "!eval") {
-    	if (config.configuration.masters.indexOf(userID) > -1)
-    	var string = message.substring("!eval ".length);
-    	try {
-          sendMessages(channelID, ["```" + eval(string) + "```"]);
-    	} catch (err) {
-    	  sendMessages(channelID, ["```" + err + "```"]);
+    	if (config.configuration.masters.indexOf(userID) > -1) {
+    	  var string = message.substring("!eval ".length);
+    	  try {
+            sendMessages(channelID, ["```" + eval(string) + "```"]);
+    	  } catch (err) {
+    	    sendMessages(channelID, ["```" + err + "```"]);
+    	  }
     	}
     }
 
