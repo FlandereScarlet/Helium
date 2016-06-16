@@ -1,11 +1,13 @@
 /*Variable area*/
 var Discordbot = require('discord.io');
-var bot = new Discordbot({
-	token: "```HIDDEN!!!```",
-	autorun: true
-});
+var config = require('./config.json')
+if (config.bot.public) {
+    var bot = new Discordbot({token: config.bot.token});
+} else {
+    var bot = new Discordbot({email: config.bot.email, password: config.bot.pass});
+}
 
-bot.startDate = Date.now();
+bot.startDate = Date.now(); 
 
 bot.on("ready", function(rawEvent) {
     console.log(" ");
