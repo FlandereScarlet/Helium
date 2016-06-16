@@ -1,10 +1,11 @@
 /*Variable area*/
 var Discordbot = require('discord.io');
 var config = require('./config.json')
+var bot = new Discordbot({token: config.bot.token});
 if (config.bot.public) {
-    var bot = new Discordbot({token: config.bot.token});
+    console.log('Public = True.\n\nEverything should work fine!')
 } else {
-    var bot = new Discordbot({email: config.bot.email, password: config.bot.pass});
+    console.log('Public = False.\n\nThis can cause issues later on...')
 }
 
 bot.startDate = Date.now(); 
@@ -105,6 +106,17 @@ bot.on("message", function(user, userID, channelID, message, rawEvent) {
     if (message === "!repeat") {
     	var string = msg.join(" "); //Join the msg variable we initialized in the beginning of the checks (line 37);
         sendMessages(channelID, ["\u200B\u180E" + msg]); //CHECK THIS
+    }
+    
+// eval | CHECK IT! :D
+    if (message === "!eval") {
+    	if (config.configuration.masters.indexOf(userID) > -1)
+    	var string = message.substring("!eval ".length);
+    	try {
+          sendMessages(channelID, ["```" + eval(string) + "```"]);
+    	} catch (err) {
+    	  sendMessages(channelID, ["```" + err + "```"]);
+    	}
     }
 
 // website
