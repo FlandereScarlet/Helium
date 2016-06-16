@@ -1,1 +1,13 @@
 
+{
+  "bot": {
+    "public": false,
+    "token": "set if public = true",
+    "email": "set if public = false",
+    "pass": "set if public = false"
+    "comments": "Yes, public can be changed. If you ask about it I'll slap you."
+  },
+  "configuration": {
+    "masters": ["add", "user", "ids", "here", "for", "eval"]
+  }
+}
