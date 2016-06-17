@@ -12,18 +12,13 @@ goto :foreverrun
 :forever
 cls
 echo Launching Helium... (Forever Run enabled. Quit application by pressing CTRL + C)
-cls
 node Helium.js
 goto :forever
 
 :once
 cls
 echo Launching Helium...
-cls
 node Helium.js
-echo Something happened! Prevented NodeJS from exiting.
-echo Press any key to return back to the menu.
-pause >nul
 goto :foreverrun
 
 :quit
