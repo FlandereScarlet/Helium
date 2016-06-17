@@ -7,7 +7,7 @@ try {
   exec('npm install discord.io', function(err, stdo, stde) {
     console.log('Install finished. Exiting Node...')
     process.exit(0)
-  }
+  })
 }
 var config = require('./config.json')
 var bot = new Discordbot({token: config.bot.token});
