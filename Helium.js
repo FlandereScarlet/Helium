@@ -1,5 +1,14 @@
 /*Variable area*/
-var Discordbot = require('discord.io');
+var exec = require('child_process').exec;
+try {
+  var Discordbot = require('discord.io');
+} catch (err) {
+  console.log('God ya big dummy! You need to install discord.io\n\nAutomatically installing Discord.IO... (This may take a while)\n\n-------------!!!!WARNING!!!!-------------\nDO NOT QUIT THIS BOT RIGHT NOW! IT WILL CAUSE CORRUPTED DATA')
+  exec('npm install discord.io', function(err, stdo, stde) {
+    console.log('Install finished. Exiting Node...')
+    process.exit(0)
+  }
+}
 var config = require('./config.json')
 var bot = new Discordbot({token: config.bot.token});
 if (config.bot.public) {
