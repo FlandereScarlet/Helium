@@ -1,13 +1,15 @@
 /*Variable area*/
 var exec = require('child_process').exec;
+var discordioinstall = false
 try {
   var Discordbot = require('discord.io');
+  discordioinstall = true
 } catch (err) {
-  console.log('God ya big dummy! You need to install discord.io\n\nAutomatically installing Discord.IO... (This may take a while)\n\n-------------!!!!WARNING!!!!-------------\nDO NOT QUIT THIS BOT RIGHT NOW! IT WILL CAUSE CORRUPTED DATA')
-  exec('npm install discord.io', function(err, stdo, stde) {
-    console.log('Install finished. Exiting Node...')
-    process.exit(0)
-  })
+  console.log('God ya big dummy! You need to install discord.io')
+  return
+}
+if (!discordioinstall) {
+  return
 }
 var config = require('./config.json')
 var bot = new Discordbot({token: config.bot.token});
@@ -17,7 +19,7 @@ if (config.bot.public) {
     console.log('Public = False.\n\nThis can cause issues later on...')
 }
 
-bot.startDate = Date.now(); 
+bot.startDate = Date.now();
 
 bot.on("ready", function(rawEvent) {
     console.log(" ");
@@ -34,7 +36,7 @@ bot.on("ready", function(rawEvent) {
     console.log(" ");
     console.log("------------------");
     bot.setPresence({game: "Hi! I'm Helium!"});
-    
+
 });
 
 bot.on("message", function(user, userID, channelID, message, rawEvent) {
@@ -42,8 +44,8 @@ bot.on("message", function(user, userID, channelID, message, rawEvent) {
 	console.log("in " + channelID);
 	console.log(message);
 	console.log("----------");
-	
-    
+
+
 	message.split(" "); //Split the message on spaces. You'll see why.
 	console.log("[DEBUG] message after split: " + message); //Log message variable after splitting
 	var msg = message; //Assign message array to a new variable because we'll be changing the message variable
@@ -51,52 +53,52 @@ bot.on("message", function(user, userID, channelID, message, rawEvent) {
 	message = message[0].toLowerCase(); //Assign message as just the command
 	console.log("[DEBUG] message[0]: " + message); //Check if this gives only the command then remove it once it works.
 	msg.shift(); //Pops the command out of the message array for ease of access (you'll see why).
-        
+
 //////////////////////
 //                  //
 //     Commands     //
 //                  //
 //////////////////////
-   
+
 // uptime
-    
+
     if (message === "!uptime") {
         calcUptime(channelID);
     }
-    
+
 //status
-    
+
     if (message === "!status") {
         sendMessages(channelID, ["Responsive\n" + calcUptime()]);
     }
-    
+
 // Kill
-    
+
     if(message === "!kill" && userID == "138862213527109632") {
             sendMessages(channelID, ["**-= Shutting down, Bye! =-**"]);
             setTimeout(function(){ console.log("\n\n\n[INFO] Kill command has been triggered!\n\n") }, 2000);
             setTimeout(function(){ process.exit(0) }, 4000);
-    } 
+    }
     else {
         sendMessages(channelID, [":x: || Only Zacimac can perform this command || :x:"]);
     }
-    
+
     if (message === "!kill -n" && userID == "138862213527109632") {
         console.log("\n\n\n[INFO] Kill command has been triggered!\n\n")
         setTimeout(function(){ process.exit(0) }, 2000);
     }
     else {
     	sendMessages(channelID, [":x: || Only Zacimac can perform this command || :x:"]);
-    } 
-    
+    }
+
 // info
-    
+
     if (message === "!info" || message === "!information") {
         sendMessages(channelID, ["**Helium!**\n-------\nBy @Zacimac\nVersion 1.2\nCreated 27th of May 2016\nConnected to ``2`` server/'s"]);
     }
-    
+
 // Hello
-    
+
     if (message === "!hi" || message === "!hi!" || message === "!hi!!" || message === "!hi!!!" || message === "!hello" || message === "!hello!" || message === "!hello!!"  || message === "!hello!!!") {
         sendMessages(channelID, ["**Hello!** :smile:\nI'm Helium!"]);
     }
@@ -105,18 +107,18 @@ bot.on("message", function(user, userID, channelID, message, rawEvent) {
     if (message === "!name.pick") {
         sendMessages(channelID, [namepicker()]);
     }
-   
+
 // github
     if (message === "!github" || message === "!git") {
         sendMessages(channelID, ["**GitHub**\nhttps://github.com/zacimac/Helium"])
     }
-    
+
 // repeat
     if (message === "!repeat") {
     	var string = msg.join(" "); //Join the msg variable we initialized in the beginning of the checks (line 37);
         sendMessages(channelID, ["\u200B\u180E" + msg]); //CHECK THIS
     }
-    
+
 // eval | CHECK IT! :D
     if (message === "!eval") {
     	if (config.configuration.masters.indexOf(userID) > -1) {
@@ -165,7 +167,7 @@ function sendMessages(ID, messageArr, interval) {
 	var callback, resArr = [], len = messageArr.length;
 	typeof(arguments[2]) === 'function' ? callback = arguments[2] : callback = arguments[3];
 	if (typeof(interval) !== 'number') interval = 1000;
-	
+
 	function _sendMessages() {
 		setTimeout(function() {
 			if (messageArr[0]) {
@@ -190,7 +192,7 @@ function sendFiles(channelID, fileArr, interval) {
 	var callback, resArr = [], len = fileArr.length;
 	typeof(arguments[2]) === 'function' ? callback = arguments[2] : callback = arguments[3];
 	if (typeof(interval) !== 'number') interval = 1000;
-	
+
 	function _sendFiles() {
 		setTimeout(function() {
 			if (fileArr[0]) {
@@ -244,13 +246,13 @@ function calcUptime(cI) {
     	secText = " second."
     }
 
-    sendMessages(cI, ["```xl\nUptime: " + days + dayText 
+    sendMessages(cI, ["```xl\nUptime: " + days + dayText
         + hrs + hrText + min + minText + sec + secText + "\n```"]);
 }
-function namepicker(chID) {    
-    var things = ['John', 
-    'Zaci', 'Jack', 'Sophie', 'Darth', 
-    'Flower', 'Thomas', 'Cameron', 'Luke', 
+function namepicker(chID) {
+    var things = ['John',
+    'Zaci', 'Jack', 'Sophie', 'Darth',
+    'Flower', 'Thomas', 'Cameron', 'Luke',
     'James', 'Mike', 'Michael', 'Jessica', 'Jesse']; //Just word-wrap array for
     var rand = things[Math.floor(Math.random() * things.length)];
     return rand;
