@@ -1,6 +1,7 @@
 title Helium Console
 color 0D
 @echo off
+cls
 :foreverrun
 cls
 set /P c=Do you want this bot to automatically restart on error? [Y/N/Q]
@@ -11,7 +12,7 @@ goto :foreverrun
 
 :forever
 cls
-echo Launching Helium... (Forever Run enabled. Quit application by pressing CTRL + C)
+echo Launching Helium... PressCtrl + C to kill the process.
 node Helium.js
 goto :forever
 
@@ -23,5 +24,5 @@ goto :foreverrun
 
 :quit
 cls
-echo OK! I'm quitting the application now.
+echo Exited.
 echo Thanks for trying out Helium.
