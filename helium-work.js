@@ -3,9 +3,9 @@ var exec = require('child_process').exec;
 try {
   var Discordbot = require('discord.io');
 } catch (err) {
-  console.log('God ya big dummy! You need to install discord.io\n\nAutomatically installing Discord.IO... (This may take a while)\n\n-------------!!!!WARNING!!!!-------------\nDO NOT QUIT THIS BOT RIGHT NOW! IT WILL CAUSE CORRUPTED DATA')
+  console.log('Could not find discord.io, installing.\n\nAutomatically installing Discord.IO... (This may take a while)\n\n-------------!!!!WARNING!!!!-------------\nDO NOT QUIT WHILST INSTALLING - IT CAN LEAD TO DATA CORRUPTION!')
   exec('npm install discord.io', function(err, stdo, stde) {
-    console.log('Install finished. Exiting Node...')
+    console.log('Installation finished. Exiting NodeJS...')
     process.exit(0)
   })
 }
@@ -149,7 +149,7 @@ bot.on("disconnected", function() {
     setTimeout(function(){ bot.connect() }, 12005);
 
 });
-//DO NOT EDIT THE BELOW IF YOU DON'T WANT THINGS TO BREAK
+//DO NOT EDIT ANYTHING BELOW THIS COMMENT UNLESS YOU KNOW WHAT YOUR ARE DOING!
 function sendMessages(ID, messageArr, interval) {
 	var callback, resArr = [], len = messageArr.length;
 	typeof(arguments[2]) === 'function' ? callback = arguments[2] : callback = arguments[3];
