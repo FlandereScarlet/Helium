@@ -1,7 +1,7 @@
 ![alt tag](https://raw.githubusercontent.com/zacimac/Helium/master/heliumbanner.png)
 
 # Helium
-A Discord bot that manages servers and more! [Join the discord server](https://discord.gg/0ynKSxHArBT4OFQj)
+A Discord bot that manages servers and more! [Join the discord server](https://discord.gg/0153dMKghr3gfbUI8)
 
 ### Library
 Helium uses izy521's [Discord.io](https://github.com/izy521/discord.io) Library. Thanks for your hard work!
@@ -57,4 +57,4 @@ The commands are not yet created as yet we are trying to work on it. If you want
 This project is open source, Although if you do use any of the code please give credit and link to our Github.
 
 ### Contribute
-If you would like to contribute to this project you will be on the Helium developer webite page (If you like) and also will be given the Helium Dev role on the [BotTopia Disord server](https://discord.gg/0ynKSxHArBT4OFQ)
+If you would like to contribute to this project you will be on the Helium developer webite page (If you like) and also will be given the Helium Dev role on the [Helium Disord server](https://discord.gg/0153dMKghr3gfbUI8)
