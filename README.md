@@ -22,7 +22,7 @@ All commands and main code is containded in the `Helium.js` file... Feel free to
 - `!name.pick`
     Picks a random name. (Was an experement)
     
-######Commands to come
+###Commands to come
 
 - `!refresh` (Only can be performed by zacimac)
     Refreshes the js file to check for any edits in the file...
@@ -50,6 +50,13 @@ All commands and main code is containded in the `Helium.js` file... Feel free to
 
 - `!removerole {username} {Role name}`
     Removes a user from a role
+
+### Other things to work on
+
+- `"Playing" Changer`
+    Automaticly changes the Playing status about every 3 secconds... A image example (faked vers)
+![alt tag](https://raw.githubusercontent.com/zacimac/Helium/master/helium-example.gif)
+
 
 The commands are not yet created as yet we are trying to work on it. If you want to help create the commands, You will be given massive credit! (Main Developer)
 
