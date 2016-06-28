@@ -23,19 +23,10 @@ bot.startDate = Date.now();
 
 bot.on("ready", function(rawEvent) {
     console.log(" ");
-    console.log(" Helium.");
-    console.log("By Zacimac & Contributors");
-    console.log(" ");
-    console.log("------------------"); ;
-    console.log(" ");
     console.log("[INFO] " + bot.username + " is now running");
     console.log(" ");
     console.log("[INFO] " + bot.username + "'s ID = " + bot.id);
-    console.log(" ")
-    console.log("[INFO] Running version of " + bot.username + " 1.4");
     console.log(" ");
-    console.log("------------------");
-    bot.setPresence({game: "Hi! I'm Helium!"});
 
 });
 
@@ -46,13 +37,13 @@ bot.on("message", function(user, userID, channelID, message, rawEvent) {
 	console.log("----------");
 
 
-	message.split(" "); //Split the message on spaces. You'll see why.
+	message.split(" "); //Split the message on spaces.
 	console.log("[DEBUG] message after split: " + message); //Log message variable after splitting
 	var msg = message; //Assign message array to a new variable because we'll be changing the message variable
 	console.log("[DEBUG] msg: " + msg); //Log msg variable
 	message = message[0].toLowerCase(); //Assign message as just the command
 	console.log("[DEBUG] message[0]: " + message); //Check if this gives only the command then remove it once it works.
-	msg.shift(); //Pops the command out of the message array for ease of access (you'll see why).
+	msg.shift(); //Pops the command out of the message array for ease of access. (Needs working on...)
 
 //////////////////////
 //                  //
