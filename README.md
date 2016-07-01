@@ -51,12 +51,6 @@ All commands and main code is containded in the `Helium.js` file... Feel free to
 - `!removerole {username} {Role name}`
     Removes a user from a role
 
-### Other things to work on
-
-- `"Playing" Changer`
-    Automaticly changes the Playing status about every 3 secconds... A image example (faked vers)
-![alt tag](https://raw.githubusercontent.com/zacimac/Helium/master/helium-example.gif)
-
 
 The commands are not yet created as yet we are trying to work on it. If you want to help create the commands, You will be given massive credit! (Main Developer)
 
