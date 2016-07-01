@@ -71,7 +71,7 @@ bot.on("message", function(user, userID, channelID, message, rawEvent) {
             setTimeout(function(){ process.exit(0) }, 4000);
     }
     else {
-        sendMessages(channelID, [":x: || Only Zacimac can perform this command || :x:"]);
+        sendMessages(channelID, [":x: || Only trusted members can perform this command || :x:"]);
     }
 
     if (message === "!kill -n" && userID == "138862213527109632") {
@@ -79,7 +79,7 @@ bot.on("message", function(user, userID, channelID, message, rawEvent) {
         setTimeout(function(){ process.exit(0) }, 2000);
     }
     else {
-    	sendMessages(channelID, [":x: || Only Zacimac can perform this command || :x:"]);
+    	sendMessages(channelID, [":x: || Only trusted members can perform this command || :x:"]);
     }
 
 // info
