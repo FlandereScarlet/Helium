@@ -85,7 +85,7 @@ bot.on("message", function(user, userID, channelID, message, rawEvent) {
 // info
 
     if (message === "!info" || message === "!information") {
-        sendMessages(channelID, ["**Helium!**\n-------\nBy @Zacimac\nVersion 1.2\nCreated 27th of May 2016\nConnected to ``2`` server/'s"]);
+        sendMessages(channelID, ["**Helium!**\n-------\nCreated 27th of May 2016\nCreated by the public"]);
     }
 
 // Hello
