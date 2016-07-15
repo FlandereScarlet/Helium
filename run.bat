@@ -24,5 +24,5 @@ goto :foreverrun
 
 :quit
 cls
-echo Exited.
-echo Thanks for trying out Helium.
+echo Helium killed.
+echo Thanks for trying out Helium. Please leave any feedback on our Github!
